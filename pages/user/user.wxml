@@ -1,0 +1,33 @@
+<!--pages/user/user.wxml-->
+<view class="user_container">
+  <view class='index_header'>
+    <view class='index_header_message'>您租用的白色小明充电宝租用时间即将到期！</view>
+    <view class='index_header_close'>X</view>
+  </view>
+  <view class='user_info container_row'>
+    <view class='user_info_img'>
+      <image src="http://img14.yiguoimg.com/e/ad/2016/160914/585749449477366062_260x320.jpg"></image>
+    </view>
+    <view class='user_info_msg'>
+      <view class='user_info_msg_name'>xiali</view>
+      <view class='user_info_msg_openid'>微信号：21122211</view>
+    </view>
+  </view>
+  <view class="user_container_information">
+    <view class='user_message container_row addLine'>
+      <image src="/image/msg3x.png" class='user_picbefor' style="width:40px; height:40px;"></image>
+      <text class='user_text'>消息</text>
+      <image src="{{guideRight}}" class='user_picright' style="width:12px; height:12px;"></image>
+    </view>
+    <view class='user_message container_row addLine'>
+      <image src="/image/about3x.png" class='user_picbefor' style="width:40px; height:40px;"></image>
+      <text class='user_text'>关于我们</text>
+      <image src="{{guideRight}}" class='user_picright' style="width:12px; height:12px;"></image>
+    </view>
+    <view class='user_message container_row'>
+      <image src="/image/phone3x.png" class='user_picbefor' style="width:40px; height:40px;"></image>
+      <text class='user_text'>联系客服</text>
+      <image src="{{guideRight}}" class='user_picright' style="width:12px; height:12px;"></image>
+    </view>
+  </view>
+</view>

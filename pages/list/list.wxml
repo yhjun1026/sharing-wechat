@@ -1,0 +1,48 @@
+<!--pages/list/list.wxml-->
+<view class='list_contain'>
+  <view class='index_header'>
+    <view class='index_header_message'>您租用的白色小明充电宝租用时间即将到期！</view>
+    <view class='index_header_close'>X</view>
+  </view>
+  <view class='list_btn container_row'>
+    <view class='list_btn_left tabs red'>
+      待归还
+    </view>
+    <view class='list_btn_right tabs default'>
+      已归还
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class='index_containt' style="height: 86%;">
+    <view class='index_containt_list' wx:for-items="{{list}}">
+      <view class='index_containt_list_left'>
+        <image src="{{ item.imgurl }}"></image>
+      </view>
+
+      <view class='index_containt_list_middle'>
+        <view class='index_containt_list_middle_top'>
+          {{ item.name }}
+        </view>
+        <view class='index_containt_list_middle_status'>
+          <image src="/image/expire3x.png"></image>
+        </view>
+        <view class='index_containt_list_middle_center'>
+          <text class='text_lable'> 押金：</text>
+          <text class='text_msg' style='color:#e9521e'>￥{{ item.price }}</text>
+        </view>
+        <view class='index_containt_list_middle_center'>
+          <text class='text_lable'> 租用时间：</text>
+          <text class='text_msg'>{{ item.hireTime }}</text>
+        </view>
+        <view class='index_containt_list_middle_center'>
+          <text class='text_lable'> 归还时间：</text>
+          <text class='text_msg'>{{ item.returnTime }}</text>
+        </view>
+        <view class='index_containt_list_middle_center'>
+          <text class='text_lable'> 单号：</text>
+          <text class='text_msg'>{{ item.billNo }}</text>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+</view>

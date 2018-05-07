@@ -1,0 +1,62 @@
+<!--pages/hire/hire.wxml-->
+<view class='hire_container'>
+  <view style='height:10px'></view>
+  <view class='hire_top'>
+    <view class='hire_top_title hire_left'>租用物品</view>
+    <view class='hire_top_info container_row hire_left'>
+      <view class='hire_top_info_left'>
+        <image src="http://img14.yiguoimg.com/e/ad/2016/160914/585749449477366062_260x320.jpg"></image>
+      </view>
+      <view class='hire_top_info_right'>
+        <view class='hire_top_info_right_top'>
+          白色小米充电宝
+        </view>
+        <view class='hire_top_info_right_center'>
+          <text class='text_lable'> 押金：</text>
+          <text class='text_msg' style='color:#e9521e'>￥50</text>
+        </view>
+        <view class='hire_top_info_right_center'>
+          <text class='text_lable'> 租用时间：</text>
+          <text class='text_msg'>2018-04-24 10:00:00</text>
+        </view>
+        <view class='hire_top_info_right_center'>
+          <text class='text_lable'> 归还时间：</text>
+          <text class='text_msg'>2018-04-24 10:00:00</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='hire_middle'>
+    <view class='container_row hire_middle_top'>
+      <view style='width:20%;text-align:left; color: #959595;font-size: 30rpx;'>
+        单号
+      </view>
+      <view style='width:80%;text-align:right'>
+        000000000001
+      </view>
+    </view>
+    <view class='container_row hire_middle_bottom'>
+      <view style='width:30%;text-align:left; color: #959595;font-size: 30rpx;'>
+        应付押金
+      </view>
+      <view style='width:70%;text-align:right'>
+        50.0
+      </view>
+    </view>
+  </view>
+  <view class='hire_bottom container_row'>
+    <view style='width:30%;text-align:left; color: #959595;font-size: 30rpx;'>
+      支付方式
+    </view>
+    <view style='width:70%;text-align:right'>
+      50.0
+    </view>
+  </view>
+
+  <view class='hire_footer container_row'>
+    <view style='width:30%;text-align:left; color: #e9521e;font-size: 45rpx;'>￥50</view>
+    <view class='hire_footer_btn'>
+      <button>提交订单</button>
+    </view>
+  </view>
+</view>
