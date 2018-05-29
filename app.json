@@ -1,16 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/list/list",
     "pages/user/user",
     "pages/hire/hire",
+    "pages/borrowDetail/borrowDetail",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "物品租用",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#aaa",

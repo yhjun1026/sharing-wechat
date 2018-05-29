@@ -1,38 +1,41 @@
 <!--index.wxml-->
 <view class="container list_contain">
-  <view class='index_header'>
+  <!-- <view class='index_header'>
     <view class='index_header_message'>您租用的白色小明充电宝租用时间即将到期！</view>
     <view class='index_header_close'>X</view>
-  </view>
+  </view> -->
   <view class='index_search'>
-    <view class='index_search_icon'>
-      <icon type="search" size="20" />
-    </view>
     <view class='index_search_input'>
-      <input class="weui-input" placeholder="搜索物品" placeholder-style="color:#d5d9df;font-size:30rpx;" />
+      <input class="weui-input" placeholder="搜索物品" placeholder-style="color:#d5d9df;font-size:30rpx;" bindinput ="nameInput"/>
+    </view>
+    <view class='index_search_icon'>
+      <icon type="search" size="20" bindtap="setFocus"/>
     </view>
   </view>
-  <scroll-view scroll-y="true" class='index_containt' style="height: 84%;">
-    <view class='index_containt_list' wx:for-items="{{list}}">
-      <view class='index_containt_list_left'>
-        <image src="{{ item.imgurl }}"></image>
-      </view>
-      <view class='index_containt_list_middle'>
-        <view class='index_containt_list_middle_top'>
-          {{ item.name }}
+  <view  class='index_containt' style="height:85%;">
+    <view style='margin-top:80rpx'>
+      <view class='index_containt_list' wx:for-items="{{list}}">
+        <view class='index_containt_list_left'>
+          <image src="{{ item.picture==''?'/image/img.png':item.picture }}"></image>
         </view>
-        <view class='index_containt_list_middle_center'>
-          <text style='color:#959595'> 押金：￥</text>
-          <text style='color:#e9521e'>{{ item.price }}</text>
+        <view class='index_containt_list_middle'>
+          <view class='index_containt_list_middle_top'>
+            {{ item.name }}
+          </view>
+          <view class='index_containt_list_middle_center'>
+            <text style='color:#959595'> 押金：￥</text>
+            <text style='color:#e9521e'>{{ item.depositamt }}</text>
+          </view>
+          <view class='index_containt_list_middle_bottom'>
+            <text style='color:#959595'> 库存：</text>
+            <text>{{ item.currentQuantity }}</text>
+          </view>
         </view>
-        <view class='index_containt_list_middle_bottom'>
-          <text style='color:#959595'> 库存：</text>
-          <text>{{ item.count }}</text>
+        <view class='index_containt_list_right'>
+          <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" id='{{item.uuid}}'>租用</button>
         </view>
-      </view>
-      <view class='index_containt_list_right'>
-        <button bindtap="listClick">租用</button>
       </view>
     </view>
-  </scroll-view>
+  </view>
+   <view style='height:15rpx'></view> 
 </view>

@@ -13,6 +13,12 @@ page {
   padding: 15rpx 0;
 }
 
+.container_row {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
 .tabs {
   border: solid #e9521e 1rpx;
   font-size: 25rpx;
@@ -45,11 +51,15 @@ page {
   border-top-right-radius: 10rpx;
 }
 
+.index_containt {
+  padding-top: 85rpx;
+}
+
 .index_containt_list {
   display: flex;
   flex-direction: row;
-  height: 300rpx;
-  padding: 25rpx 0;
+  height: 250rpx;
+  padding: 15rpx 0;
   border-bottom: solid #f5f5f6 1rpx;
   margin: 0 25rpx;
 }
@@ -59,15 +69,17 @@ page {
 }
 
 .index_containt_list_left image {
-  width: 100%;
-  height: 100%;
+  width: 240rpx;
+  height: 240rpx;
+  padding-top: 10rpx;
 }
 
 .index_containt_list_middle {
   width: 65%;
   display: flex;
   flex-direction: column;
-  padding-top: 15rpx;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
 }
 
 .index_containt_list_middle_top {
@@ -83,15 +95,18 @@ page {
   color: #959595;
   font-size: 25rpx;
 }
-.text_msg{
- font-size: 25rpx;
-}
-.index_containt_list_middle_status{
-  position: absolute;
-  margin-left: 40%;
+
+.text_msg {
+  font-size: 25rpx;
 }
 
-.index_containt_list_middle_status image{
+.index_containt_list_middle_status {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -20rpx;
+}
+
+.index_containt_list_middle_status image {
   width: 160rpx;
   height: 120rpx;
 }

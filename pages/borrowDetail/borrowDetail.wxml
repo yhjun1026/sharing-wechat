@@ -1,0 +1,78 @@
+<!--pages/hire/hire.wxml-->
+<view class='hire_container'>
+  <view style='height:10px'></view>
+  <view class='hire_top'>
+    <view class='hire_top_title hire_left'>租用物品</view>
+    <view class='hire_top_info container_row hire_left'>
+      <view class='hire_top_info_left'>
+        <image src="{{ list.goodsDtl[0].picture==''?'/image/img.png':list.goodsDtl[0].picture }}"></image>
+      </view>
+      <view class='hire_top_info_right'>
+        <view class='hire_top_info_right_top'>
+          {{list.goodsDtl[0].name}}
+        </view>
+        <view class='hire_top_info_right_center'>
+          <text class='text_lable'> 押金：</text>
+          <text class='text_msg' style='color:#e9521e'>￥{{list.goodsDtl[0].depositAmt}}</text>
+        </view>
+        <view class='hire_top_info_right_center'>
+          <text class='text_lable'> 租用时间：</text>
+          <text class='text_msg'>{{list.createTime}}</text>
+        </view>
+        <view class='hire_top_info_right_center'>
+          <text class='text_lable'> 归还时间：</text>
+          <text class='text_msg'>{{list.planBackTime }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 租用记录明细 -->
+  <view>
+    <view class="hire_middle hire_middle_list">
+      <view class='container_row hire_middle_top'>
+        <view style='width:20%;text-align:left; color: #959595;font-size: 30rpx;'>
+          单号
+        </view>
+        <view style='width:80%;text-align:right;color: #333;font-size: 30rpx;'>
+          {{list.billNumber}}
+        </view>
+      </view>
+      <view class='container_row hire_middle_top'>
+        <view style='width:30%;text-align:left; color: #959595;font-size: 30rpx;'>
+          押金金额
+        </view>
+        <view style='width:70%;text-align:right;color: #333;font-size: 30rpx;'>
+          ￥{{list.goodsDtl[0].depositAmt }}
+        </view>
+      </view>
+      <view class='container_row hire_middle_top'>
+        <view style='width:30%;text-align:left; color: #959595;font-size: 30rpx;'>
+          支付方式
+        </view>
+        <view style='width:70%;text-align:right;color: #333;font-size: 30rpx;'>
+          微信支付
+        </view>
+      </view>
+    </view>
+    <!-- <view class='hire_bottom container_row'>
+      <view style='width:30%;text-align:left; color: #959595;font-size: 30rpx;'>
+        支付方式
+      </view>
+      <view style='width:50%;text-align:right;font-size:28rpx;'>
+        <view>
+          <image src="/image/wechatpay.png" class='pay-type-img'></image>
+        </view>
+      </view>
+      <view style='width:20%;text-align:right;font-size:28rpx;'>
+        <view style='margin-top:6rpx'>微信支付</view>
+      </view>
+    </view> -->
+    <view class='hire_footer container_row' wx:if="{{list.goodsDtl[0].compensateAmt>0&&list.stat!='backed'&&list.stat!='compensated'}}">
+      <view style='width:30%;text-align:left; color: #e9521e;font-size: 45rpx;'>￥{{list.goodsDtl[0].compensateAmt}}</view>
+      <view class='hire_footer_btn'>
+        <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">提交订单</button> -->
+        <button bindtap="gotoCompensate">赔偿</button>
+      </view>
+    </view>
+  </view>
+</view>
